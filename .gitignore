@@ -1,0 +1,32 @@
+## Opções de Build (Compilação)
+[Bb]in/
+[Ob]j/
+
+## Visual Studio
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+## VS Code
+.vscode/
+
+## User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Publicação e Pacotes
+publish/
+*.nupkg
+**/node_modules/
+
+## Configurações Sensíveis (IMPORTANTE)
+appsettings.Development.json
+secrets.json
+.env
+
+## Logs
+*.log

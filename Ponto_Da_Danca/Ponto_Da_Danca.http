@@ -1,0 +1,6 @@
+@Ponto_Da_Danca_HostAddress = http://localhost:5164
+
+GET {{Ponto_Da_Danca_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
