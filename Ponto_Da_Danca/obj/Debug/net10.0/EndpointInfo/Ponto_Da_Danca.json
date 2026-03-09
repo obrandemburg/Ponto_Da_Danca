@@ -45,10 +45,10 @@
         }
       }
     },
-    "/api/usuarios": {
+    "/api/usuarios/cadastrar": {
       "post": {
         "tags": [
-          "Ponto_Da_Danca"
+          "Usuários"
         ],
         "requestBody": {
           "content": {
@@ -67,27 +67,16 @@
         }
       }
     },
-    "/api/usuarios/{id}/perfil": {
-      "put": {
+    "/api/usuarios/bolsistas": {
+      "post": {
         "tags": [
-          "Ponto_Da_Danca"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
-          }
+          "Usuários"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/EditarPerfilRequest"
+                "$ref": "#/components/schemas/CriarUsuarioRequest"
               }
             }
           },
@@ -100,19 +89,16 @@
         }
       }
     },
-    "/api/usuarios/bulk": {
-      "post": {
+    "/api/usuarios/perfil": {
+      "put": {
         "tags": [
-          "Ponto_Da_Danca"
+          "Usuários"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/CriarUsuarioRequest"
-                }
+                "$ref": "#/components/schemas/EditarPerfilRequest"
               }
             }
           },
@@ -323,6 +309,9 @@
   "tags": [
     {
       "name": "Autenticação"
+    },
+    {
+      "name": "Usuários"
     },
     {
       "name": "Ponto_Da_Danca"

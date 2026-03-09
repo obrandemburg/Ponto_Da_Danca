@@ -12,6 +12,14 @@ public class UsuarioConfiguration : IEntityTypeConfiguration<Usuario>
         builder.Property(u => u.Nome).IsRequired().HasMaxLength(150);
         builder.HasIndex(u => u.Email).IsUnique();
         builder.Property(u => u.SenhaHash).IsRequired();
-        builder.Property(u => u.Tipo).IsRequired().HasMaxLength(50);
+
+        // Configuração TPH (Table-Per-Hierarchy)
+        builder.HasDiscriminator(u => u.Tipo)
+            .HasValue<Aluno>("Aluno")
+            .HasValue<Professor>("Professor")
+            .HasValue<Bolsista>("Bolsista")
+            .HasValue<Gerente>("Gerente")
+            .HasValue<Recepcao>("Recepção")
+            .HasValue<Lider>("Líder");
     }
 }

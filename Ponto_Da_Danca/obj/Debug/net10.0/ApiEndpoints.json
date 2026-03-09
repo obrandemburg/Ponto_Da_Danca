@@ -87,8 +87,8 @@
   },
   {
     "ContainingType": "Ponto_Da_Danca.Endpoints.UsuarioEndpoints\u002B\u003C\u003Ec",
-    "Method": "\u003CMapUsuarioEndpoints\u003Eb__0_0",
-    "RelativePath": "api/usuarios/",
+    "Method": "\u003CMapUsuarioEndpoints\u003Eb__0_2",
+    "RelativePath": "api/usuarios/bolsistas",
     "HttpMethod": "POST",
     "IsController": false,
     "Order": 0,
@@ -105,21 +105,44 @@
         "MediaTypes": [],
         "StatusCode": 200
       }
+    ],
+    "Tags": [
+      "Usu\u00E1rios"
     ]
   },
   {
     "ContainingType": "Ponto_Da_Danca.Endpoints.UsuarioEndpoints\u002B\u003C\u003Ec",
-    "Method": "\u003CMapUsuarioEndpoints\u003Eb__0_1",
-    "RelativePath": "api/usuarios/{id}/perfil",
-    "HttpMethod": "PUT",
+    "Method": "\u003CMapUsuarioEndpoints\u003Eb__0_0",
+    "RelativePath": "api/usuarios/cadastrar",
+    "HttpMethod": "POST",
     "IsController": false,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Guid",
+        "Name": "request",
+        "Type": "Ponto_Da_Danca.DTOs.CriarUsuarioRequest",
         "IsRequired": true
-      },
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Usu\u00E1rios"
+    ]
+  },
+  {
+    "ContainingType": "Ponto_Da_Danca.Endpoints.UsuarioEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapUsuarioEndpoints\u003Eb__0_4",
+    "RelativePath": "api/usuarios/perfil",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
       {
         "Name": "request",
         "Type": "Ponto_Da_Danca.DTOs.EditarPerfilRequest",
@@ -132,28 +155,9 @@
         "MediaTypes": [],
         "StatusCode": 200
       }
-    ]
-  },
-  {
-    "ContainingType": "Ponto_Da_Danca.Endpoints.UsuarioEndpoints\u002B\u003C\u003Ec",
-    "Method": "\u003CMapUsuarioEndpoints\u003Eb__0_2",
-    "RelativePath": "api/usuarios/bulk",
-    "HttpMethod": "POST",
-    "IsController": false,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "requests",
-        "Type": "System.Collections.Generic.List\u00601[[Ponto_Da_Danca.DTOs.CriarUsuarioRequest, Ponto_Da_Danca, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "IsRequired": true
-      }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
+    "Tags": [
+      "Usu\u00E1rios"
     ]
   }
 ]

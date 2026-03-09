@@ -15,9 +15,8 @@ public static class AuthEndpoints
         {
             var usuario = await db.Usuarios.FirstOrDefaultAsync(u => u.Email == request.Email);
 
-            // Em produção, utilize BCrypt para validar o Hash! 
-            // Para o MVP inicial validaremos de forma direta se a senha bater com o hash salvo.
-            if (usuario == null || usuario.SenhaHash != request.Senha)
+            // Validação usando o BCrypt.Verify
+            if (usuario == null || !BCrypt.Net.BCrypt.Verify(request.Senha, usuario.SenhaHash))
                 return Results.Unauthorized();
 
             var token = tokenService.GerarToken(usuario);

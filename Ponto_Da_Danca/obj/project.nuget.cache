@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "OGvH42eDzy8=",
+  "dgSpecHash": "vzzrhOeQhAE=",
   "success": true,
   "projectFilePath": "C:\\Users\\gdmat\\source\\repos\\Ponto_Da_Danca\\Ponto_Da_Danca\\Ponto_Da_Danca.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\gdmat\\.nuget\\packages\\bcrypt.net-next\\4.1.0\\bcrypt.net-next.4.1.0.nupkg.sha512",
     "C:\\Users\\gdmat\\.nuget\\packages\\efcore.bulkextensions.core\\10.0.1\\efcore.bulkextensions.core.10.0.1.nupkg.sha512",
     "C:\\Users\\gdmat\\.nuget\\packages\\efcore.bulkextensions.postgresql\\10.0.1\\efcore.bulkextensions.postgresql.10.0.1.nupkg.sha512",
     "C:\\Users\\gdmat\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
