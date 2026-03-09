@@ -35,9 +35,6 @@ C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\Mono
 C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\Newtonsoft.Json.dll
 C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\Npgsql.dll
 C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
-C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\System.CodeDom.dll
 C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\System.Composition.AttributedModel.dll
 C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\System.Composition.Convention.dll
@@ -125,3 +122,12 @@ C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\obj\Debug\net10.0\Pont
 C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\obj\Debug\net10.0\Ponto_Da_Danca.genruntimeconfig.cache
 C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\obj\Debug\net10.0\ref\Ponto_Da_Danca.dll
 C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\Scalar.AspNetCore.dll
+C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll

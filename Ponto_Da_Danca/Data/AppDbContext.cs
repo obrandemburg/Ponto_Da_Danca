@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Ponto_Da_Danca.Entities;
-using Ponto_Da_Danca.Entities;
 using System.Reflection.Emit;
 
 namespace Ponto_Da_Danca.Data;

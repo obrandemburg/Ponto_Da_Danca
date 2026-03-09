@@ -1,6 +1,4 @@
-﻿// 3. Configurations/UsuarioConfiguration.cs
-// Configura a tabela no banco de forma limpa, isolada do DbContext.
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Ponto_Da_Danca.Entities;
 
@@ -13,5 +11,7 @@ public class UsuarioConfiguration : IEntityTypeConfiguration<Usuario>
         builder.HasKey(u => u.Id);
         builder.Property(u => u.Nome).IsRequired().HasMaxLength(150);
         builder.HasIndex(u => u.Email).IsUnique();
+        builder.Property(u => u.SenhaHash).IsRequired();
+        builder.Property(u => u.Tipo).IsRequired().HasMaxLength(50);
     }
 }

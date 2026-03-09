@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "Ponto_Da_Danca.Endpoints.AuthEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAuthEndpoints\u003Eb__0_0",
+    "RelativePath": "api/auth/login",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Ponto_Da_Danca.DTOs.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Ponto_Da_Danca.DTOs.LoginResponse",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 401
+      }
+    ],
+    "Tags": [
+      "Autentica\u00E7\u00E3o"
+    ]
+  },
+  {
     "ContainingType": "Ponto_Da_Danca.Endpoints.TurmaEndpoints\u002B\u003C\u003Ec",
     "Method": "\u003CMapTurmaEndpoints\u003Eb__0_0",
     "RelativePath": "api/turmas/",

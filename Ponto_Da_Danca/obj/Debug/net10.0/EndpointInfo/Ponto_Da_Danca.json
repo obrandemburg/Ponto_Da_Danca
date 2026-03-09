@@ -1,9 +1,17 @@
 {
-  "openapi": "3.0.4",
+  "openapi": "3.1.1",
   "info": {
-    "title": "Ponto_Da_Danca",
-    "version": "1.0"
+    "title": "Ponto_Da_Danca | v1",
+    "version": "1.0.0"
   },
+  "servers": [
+    {
+      "url": "https://localhost:7010"
+    },
+    {
+      "url": "http://localhost:5164"
+    }
+  ],
   "paths": {
     "/api/usuarios": {
       "post": {
@@ -23,6 +31,38 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "tags": [
+          "Autenticação"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
           }
         }
       }
@@ -86,6 +126,16 @@
   "components": {
     "schemas": {
       "CriarTurmaRequest": {
+        "required": [
+          "ritmoId",
+          "professorId",
+          "horario",
+          "diaFixoSemana",
+          "sala",
+          "limiteAlunos",
+          "nivelTecnico",
+          "dataInicio"
+        ],
         "type": "object",
         "properties": {
           "ritmoId": {
@@ -97,59 +147,108 @@
             "format": "uuid"
           },
           "horario": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           },
           "diaFixoSemana": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           },
           "sala": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           },
           "limiteAlunos": {
-            "type": "integer",
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
             "format": "int32"
           },
           "nivelTecnico": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           },
           "dataInicio": {
             "type": "string",
             "format": "date-time"
           }
-        },
-        "additionalProperties": false
+        }
       },
       "CriarUsuarioRequest": {
+        "required": [
+          "nome",
+          "email",
+          "senha",
+          "tipo"
+        ],
         "type": "object",
         "properties": {
           "nome": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           },
           "email": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           },
           "senha": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           },
           "tipo": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           }
-        },
-        "additionalProperties": false
+        }
+      },
+      "LoginRequest": {
+        "required": [
+          "email",
+          "senha"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "senha": {
+            "type": "string"
+          }
+        }
+      },
+      "LoginResponse": {
+        "required": [
+          "token",
+          "nome",
+          "tipo"
+        ],
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string"
+          },
+          "nome": {
+            "type": "string"
+          },
+          "tipo": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
       }
     }
   },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ],
   "tags": [
     {
       "name": "Ponto_Da_Danca"
+    },
+    {
+      "name": "Autenticação"
     }
   ]
 }
