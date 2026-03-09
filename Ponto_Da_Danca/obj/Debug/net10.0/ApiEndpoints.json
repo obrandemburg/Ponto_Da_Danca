@@ -88,7 +88,7 @@
   {
     "ContainingType": "Ponto_Da_Danca.Endpoints.UsuarioEndpoints\u002B\u003C\u003Ec",
     "Method": "\u003CMapUsuarioEndpoints\u003Eb__0_0",
-    "RelativePath": "api/usuarios",
+    "RelativePath": "api/usuarios/",
     "HttpMethod": "POST",
     "IsController": false,
     "Order": 0,
@@ -96,6 +96,55 @@
       {
         "Name": "request",
         "Type": "Ponto_Da_Danca.DTOs.CriarUsuarioRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Ponto_Da_Danca.Endpoints.UsuarioEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapUsuarioEndpoints\u003Eb__0_1",
+    "RelativePath": "api/usuarios/{id}/perfil",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Ponto_Da_Danca.DTOs.EditarPerfilRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Ponto_Da_Danca.Endpoints.UsuarioEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapUsuarioEndpoints\u003Eb__0_2",
+    "RelativePath": "api/usuarios/bulk",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requests",
+        "Type": "System.Collections.Generic.List\u00601[[Ponto_Da_Danca.DTOs.CriarUsuarioRequest, Ponto_Da_Danca, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
       }
     ],

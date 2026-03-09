@@ -1,5 +1,5 @@
-﻿// 5. Services/UsuarioService.cs
-// Executa a regra de negócio orquestrando DTOs, Entidades e o Data.
+﻿// Services/UsuarioService.cs
+using EFCore.BulkExtensions;
 using Ponto_Da_Danca.Data;
 using Ponto_Da_Danca.DTOs;
 using Ponto_Da_Danca.Entities;
@@ -17,23 +17,30 @@ public class UsuarioService
 
     public async Task<Usuario> CriarUsuarioAsync(CriarUsuarioRequest request)
     {
-        // Aqui entraria o código do Validator para checar regras
-
-        // Como é um MVP, estamos passando a senha direto para o SenhaHash.
-        // Em um cenário de produção, aqui entraria a lógica de Infrastructure 
-        // para encriptar a senha (ex: BCrypt.Net.BCrypt.HashPassword(request.Senha))
-
-        // Passando os 4 parâmetros exigidos pelo novo construtor:
-        var novoUsuario = new Usuario(
-            request.Nome,
-            request.Email,
-            request.Senha, // Adicionando a senha aqui!
-            request.Tipo
-        );
-
-        _context.Usuarios.Add(novoUsuario);
+        // Hash de senha fictício para exemplo
+        var usuario = new Usuario(request.Nome, request.Email, "hash_senha", request.Tipo);
+        _context.Usuarios.Add(usuario);
         await _context.SaveChangesAsync();
+        return usuario;
+    }
 
-        return novoUsuario;
+    public async Task InserirUsuariosEmMassaAsync(IEnumerable<CriarUsuarioRequest> requests)
+    {
+        // Converte a lista de DTOs para Entidades
+        var usuarios = requests.Select(r =>
+            new Usuario(r.Nome, r.Email, "hash_padrao", r.Tipo)).ToList();
+
+        // Utiliza o EFCore.BulkExtensions para inserir milhares de registros em segundos
+        // Esta operação gera comandos COPY/INSERT em lote no PostgreSQL, ignorando o tracker do EF para performance
+        await _context.BulkInsertAsync(usuarios);
+    }
+
+    public async Task AtualizarPerfilAsync(Guid id, EditarPerfilRequest request)
+    {
+        var usuario = await _context.Usuarios.FindAsync(id)
+            ?? throw new Exception("Usuário não encontrado.");
+
+        usuario.EditarPerfil(request.FotoUrl, request.NomeSocial, request.Biografia);
+        await _context.SaveChangesAsync();
     }
 }

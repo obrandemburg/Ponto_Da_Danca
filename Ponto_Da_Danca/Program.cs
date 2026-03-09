@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi; // IMPORTANTE: No .NET 10 o ".Models" foi removido
 using Scalar.AspNetCore;
+using FluentValidation;
 using Ponto_Da_Danca.Data;
 using Ponto_Da_Danca.Endpoints;
 using Ponto_Da_Danca.Services;
@@ -29,6 +30,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 
 builder.Services.AddAuthorization();
+
+// ===  REGISTRAR FLUENTVALIDATION ===
+// Isso varre o assembly atual e registra todas as classes que herdam de AbstractValidator
+builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 
 // === 2. REGISTRAR O OPENAPI NATIVO (.NET 10) ===
 builder.Services.AddEndpointsApiExplorer();

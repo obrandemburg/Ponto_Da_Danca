@@ -121,7 +121,6 @@ C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\obj\Debug\net10.0\refi
 C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\obj\Debug\net10.0\Ponto_Da_Danca.pdb
 C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\obj\Debug\net10.0\Ponto_Da_Danca.genruntimeconfig.cache
 C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\obj\Debug\net10.0\ref\Ponto_Da_Danca.dll
-C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
@@ -131,3 +130,10 @@ C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\Micr
 C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\Scalar.AspNetCore.dll
 C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\EFCore.BulkExtensions.Core.dll
+C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\EFCore.BulkExtensions.PostgreSql.dll
+C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\FluentValidation.dll
+C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\MedallionTopologicalSort.dll
+C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\bin\Debug\net10.0\NetTopologySuite.dll
+C:\Users\gdmat\source\repos\Ponto_Da_Danca\Ponto_Da_Danca\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

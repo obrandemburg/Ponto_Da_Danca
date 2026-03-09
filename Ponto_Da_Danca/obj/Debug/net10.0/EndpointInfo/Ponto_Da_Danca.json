@@ -13,28 +13,6 @@
     }
   ],
   "paths": {
-    "/api/usuarios": {
-      "post": {
-        "tags": [
-          "Ponto_Da_Danca"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CriarUsuarioRequest"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/auth/login": {
       "post": {
         "tags": [
@@ -63,6 +41,86 @@
           },
           "401": {
             "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/api/usuarios": {
+      "post": {
+        "tags": [
+          "Ponto_Da_Danca"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CriarUsuarioRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/usuarios/{id}/perfil": {
+      "put": {
+        "tags": [
+          "Ponto_Da_Danca"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditarPerfilRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/usuarios/bulk": {
+      "post": {
+        "tags": [
+          "Ponto_Da_Danca"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CriarUsuarioRequest"
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -195,6 +253,25 @@
           }
         }
       },
+      "EditarPerfilRequest": {
+        "required": [
+          "fotoUrl",
+          "nomeSocial",
+          "biografia"
+        ],
+        "type": "object",
+        "properties": {
+          "fotoUrl": {
+            "type": "string"
+          },
+          "nomeSocial": {
+            "type": "string"
+          },
+          "biografia": {
+            "type": "string"
+          }
+        }
+      },
       "LoginRequest": {
         "required": [
           "email",
@@ -245,10 +322,10 @@
   ],
   "tags": [
     {
-      "name": "Ponto_Da_Danca"
+      "name": "Autenticação"
     },
     {
-      "name": "Autenticação"
+      "name": "Ponto_Da_Danca"
     }
   ]
 }
