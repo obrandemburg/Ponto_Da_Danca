@@ -14,25 +14,29 @@ public class TurmaService
         _context = context;
     }
 
-    public async Task<TurmaResponse> CriarTurmaAsync(CriarTurmaRequest request)
+    public async Task<TurmaResponse?> CriarTurmaAsync(CriarTurmaRequest request)
     {
+        // 1. Verifica se o Ritmo existe antes de continuar
+        var ritmo = await _context.Ritmos.FindAsync(request.RitmoId);
+        if (ritmo == null)
+        {
+            return null; // Ou lance uma exceção personalizada indicando "Ritmo não encontrado"
+        }
+
         var novaTurma = new Turma(request.RitmoId, request.ProfessorId, request.Horario, request.DiaFixoSemana, request.Sala, request.LimiteAlunos, request.NivelTecnico, request.DataInicio);
 
         _context.Turmas.Add(novaTurma);
         await _context.SaveChangesAsync();
 
-        // Busca o ritmo para retornar o nome no DTO
-        var ritmo = await _context.Ritmos.FindAsync(request.RitmoId);
-
-        return new TurmaResponse(novaTurma.Id, ritmo?.Nome ?? "", novaTurma.Horario, novaTurma.DiaFixoSemana, novaTurma.Sala, novaTurma.LimiteAlunos, novaTurma.NivelTecnico);
+        return new TurmaResponse(novaTurma.Id, ritmo.Nome, novaTurma.Horario, novaTurma.DiaFixoSemana, novaTurma.Sala, novaTurma.LimiteAlunos, novaTurma.NivelTecnico);
     }
 
-    [cite_start]// Funcionalidade: Listar turmas da escola com filtros [cite: 95]
+    // Funcionalidade: Listar turmas da escola com filtros [cite: 95]
     public async Task<List<TurmaResponse>> ListarTurmasAsync(string? modalidade, string? nivel, string? diaSemana)
     {
         var query = _context.Turmas.Include(t => t.Ritmo).AsQueryable();
 
-        [cite_start]// Aplicando os filtros descritos na abstração [cite: 96, 100, 101]
+        // Aplicando os filtros descritos na abstração [cite: 96, 100, 101]
         if (!string.IsNullOrWhiteSpace(modalidade))
             query = query.Where(t => t.Ritmo.Modalidade == modalidade);
 

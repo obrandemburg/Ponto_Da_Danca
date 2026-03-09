@@ -9,14 +9,14 @@ public static class TurmaEndpoints
     {
         var grupo = app.MapGroup("/api/turmas");
 
-        [cite_start]// Listar turmas da escola [cite: 95]
+        // Listar turmas da escola [cite: 95]
         grupo.MapGet("/", async (string? modalidade, string? nivel, string? diaSemana, TurmaService service) =>
         {
             var turmas = await service.ListarTurmasAsync(modalidade, nivel, diaSemana);
             return Results.Ok(turmas);
         });
 
-        [cite_start]// Recepção pode criar novas turmas [cite: 72]
+        // Recepção pode criar novas turmas [cite: 72]
         grupo.MapPost("/", async (CriarTurmaRequest request, TurmaService service) =>
         {
             var turma = await service.CriarTurmaAsync(request);

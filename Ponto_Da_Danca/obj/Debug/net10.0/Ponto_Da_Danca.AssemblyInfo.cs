@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ponto_Da_Danca")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dbc5cf9cd420cfb5279724c39cbc92c67f301a7c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01ee2d52aeab37334299cd9cefdc9f57aac02cfb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ponto_Da_Danca")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ponto_Da_Danca")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

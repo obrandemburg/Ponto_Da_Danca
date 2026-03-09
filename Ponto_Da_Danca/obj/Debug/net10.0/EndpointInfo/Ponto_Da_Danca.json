@@ -1,0 +1,155 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Ponto_Da_Danca",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/usuarios": {
+      "post": {
+        "tags": [
+          "Ponto_Da_Danca"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CriarUsuarioRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/turmas": {
+      "get": {
+        "tags": [
+          "Ponto_Da_Danca"
+        ],
+        "parameters": [
+          {
+            "name": "modalidade",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "nivel",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "diaSemana",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Ponto_Da_Danca"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CriarTurmaRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CriarTurmaRequest": {
+        "type": "object",
+        "properties": {
+          "ritmoId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "professorId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "horario": {
+            "type": "string",
+            "nullable": true
+          },
+          "diaFixoSemana": {
+            "type": "string",
+            "nullable": true
+          },
+          "sala": {
+            "type": "string",
+            "nullable": true
+          },
+          "limiteAlunos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nivelTecnico": {
+            "type": "string",
+            "nullable": true
+          },
+          "dataInicio": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CriarUsuarioRequest": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "senha": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Ponto_Da_Danca"
+    }
+  ]
+}

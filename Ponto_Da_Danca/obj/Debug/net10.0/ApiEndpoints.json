@@ -1,0 +1,78 @@
+[
+  {
+    "ContainingType": "Ponto_Da_Danca.Endpoints.TurmaEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapTurmaEndpoints\u003Eb__0_0",
+    "RelativePath": "api/turmas/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "modalidade",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "nivel",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "diaSemana",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Ponto_Da_Danca.Endpoints.TurmaEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapTurmaEndpoints\u003Eb__0_1",
+    "RelativePath": "api/turmas/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Ponto_Da_Danca.DTOs.CriarTurmaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Ponto_Da_Danca.Endpoints.UsuarioEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapUsuarioEndpoints\u003Eb__0_0",
+    "RelativePath": "api/usuarios",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Ponto_Da_Danca.DTOs.CriarUsuarioRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

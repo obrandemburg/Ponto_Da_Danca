@@ -1,10 +1,10 @@
 ﻿// 5. Services/UsuarioService.cs
 // Executa a regra de negócio orquestrando DTOs, Entidades e o Data.
-using PontoDaDanca.Data;
-using PontoDaDanca.DTOs;
-using PontoDaDanca.Entities;
+using Ponto_Da_Danca.Data;
+using Ponto_Da_Danca.DTOs;
+using Ponto_Da_Danca.Entities;
 
-namespace PontoDaDanca.Services;
+namespace Ponto_Da_Danca.Services;
 
 public class UsuarioService
 {

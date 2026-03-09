@@ -1,6 +1,6 @@
 ﻿// 1. Entities/Usuario.cs
 // Entidade pura, sem anotações de banco de dados.
-namespace PontoDaDanca.Entities;
+namespace Ponto_Da_Danca.Entities;
 
 public class Usuario
 {

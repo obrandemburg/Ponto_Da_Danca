@@ -2,9 +2,9 @@
 // Configura a tabela no banco de forma limpa, isolada do DbContext.
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using PontoDaDanca.Entities;
+using Ponto_Da_Danca.Entities;
 
-namespace PontoDaDanca.Configurations;
+namespace Ponto_Da_Danca.Configurations;
 
 public class UsuarioConfiguration : IEntityTypeConfiguration<Usuario>
 {

@@ -1,9 +1,9 @@
 ﻿// 6. Endpoints/UsuarioEndpoints.cs
 // Isola as rotas Minimal API fora do Program.cs
-using PontoDaDanca.DTOs;
-using PontoDaDanca.Services;
+using Ponto_Da_Danca.DTOs;
+using Ponto_Da_Danca.Services;
 
-namespace PontoDaDanca.Endpoints;
+namespace Ponto_Da_Danca.Endpoints;
 
 public static class UsuarioEndpoints
 {
